@@ -3,74 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Weather App</title>
 </head>
 <body>
     
-    <div class="header" id="header">
-        <div class="city-container">      
-            <h3 id="ciudad"></h3>
-            <h6 id="today"></h6>
-        </div>
+    <div class="full-container">
+        <div class="header" id="header">
+            <div class="city-container">      
+                <h3 id="ciudad"></h3>
+                <h6 id="today"></h6>
+            </div>
 
-        <div class="weather ">
-            <h1 id="temp"></h1>
-            <i class ="iconToday"></i>
-            <h3 id="description"></h3>
-        </div>
+            <div class="weather ">
+                <h1 id="temp"></h1>
+                <i class ="iconToday"></i>
+                <h3 id="description"></h3>
+            </div>
 
-        <div class="items ">
-            <div class="item"><p id="humidity"></p></div>
-            <div class="item"><p id="wind"></p></div>
-            <div class="item"><p id="feels_like"></p></div>
+            <div class="items ">
+                <div class="item"><p id="humidity"></p></div>
+                <div class="item"><p id="wind"></p></div>
+                <div class="item"><p id="feels_like"></p></div>
+            </div>
+        </div>
+        
+        <div class="forecast">
+            <div class="search">
+                <input type="text" class="input-search" placeholder="buscar ciudad" id="search-input">
+                <button class="button" id="button" onclick="search()"><i class="fas fa-search-location"></i></button>
+            </div>
+
+            <div class="day-container forecast-bg">
+                <div class="list ">
+                    
+                    <div class="day"> 
+                        <h4 id ="nxtday1"></h4>
+                        <h4 class="icons"></h4> 
+                    </div>  
+                    <div class="min-max">
+                        <h4 class="max" ></h4>
+                        <h4 class="min"></h4>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="day">
+                        <h4 id ="nxtday2"></h4> 
+                        <h4 class="icons"></h4>
+                    </div> 
+                    
+                    <div class="min-max">
+                        <h4 class="max" ></h4>
+                        <h4 class="min"  ></h4>
+                    </div>
+                </div>
+                <div class="list"> 
+                    <div class="day">
+                        <h4 id ="nxtday3"></h4> 
+                        <h4 class="icons"></h4>
+    
+                    </div> 
+                    <div class="min-max">
+                        <h4 class="max" ></h4>
+                        <h4 class="min" ></h4>
+                    </div>
+                </div>
+            </div>        
+
+            
         </div>
     </div>
     
-    <div class="forecast">
-        <div class="day-container forecast-bg">
-            <div class="list ">
-                
-                <div class="day"> 
-                    <h4 id ="nxtday1"></h4>
-                    <h4 class="icons"></h4> 
-                </div>  
-                <div class="min-max">
-                    <h4 class="max" ></h4>
-                    <h4 class="min"></h4>
-                </div>
-            </div>
-            <div class="list">
-                <div class="day">
-                    <h4 id ="nxtday2"></h4> 
-                    <h4 class="icons"></h4>
-                </div> 
-                
-                <div class="min-max">
-                    <h4 class="max" ></h4>
-                    <h4 class="min"  ></h4>
-                </div>
-            </div>
-            <div class="list"> 
-                <div class="day">
-                    <h4 id ="nxtday3"></h4> 
-                    <h4 class="icons"></h4>
-   
-                </div> 
-                <div class="min-max">
-                    <h4 class="max" ></h4>
-                    <h4 class="min" ></h4>
-                </div>
-            </div>
-        </div>        
-
-        <div class="search">
-            <input type="text" class="input-search" placeholder="buscar ciudad" id="search-input">
-            <button class="button" id="button" onclick="search()"><i class="fas fa-search-location"></i></button>
-        </div>
-    </div>
 
     <script src="weatherApp.js"></script>
 </body>

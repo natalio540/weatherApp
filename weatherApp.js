@@ -60,18 +60,20 @@ function WeatherForecast(lat,lon){
                 /* change the background color of the current weather */
             switch(true){
                 case mainCondition >200 && mainCondition <550:
-                    document.querySelector("#header").classList.add("rainy")//rainy
+                    document.querySelector("#header").style.background="#616161"//rainy
                     break
                 case mainCondition >600 && mainCondition <650:
-                    document.querySelector("#header").classList.add("snow")//snow
+
+                    document.querySelector("#header").style.background="#00467F"//snow
                     break  
                 case mainCondition >=801 && mainCondition <=804:
-                    document.querySelector("#header").classList.add("clouds") //clouds
+                    document.querySelector("#header").style.background="#B79891" //clouds
                     break
                 case mainCondition ===800:
-                    document.querySelector("#header").classList.add("sunny")//sunny
+                    document.querySelector("#header").style.background="#ffe259" //sunny
                     break      
             }
+            
         
             /* asign a date */
             document.querySelector('#today').innerHTML = `${today}`;
